@@ -123,9 +123,9 @@ public class ACRA {
         mApplication = app;
         mReportsCrashes = mApplication.getClass().getAnnotation(ReportsCrashes.class);
         if (mReportsCrashes == null) {
-            log.e(LOG_TAG,
+            log.w(LOG_TAG,
                     "ACRA#init called but no ReportsCrashes annotation on Application " + mApplication.getPackageName());
-            return;
+            //return;
         }
 
         final SharedPreferences prefs = getACRASharedPreferences();
